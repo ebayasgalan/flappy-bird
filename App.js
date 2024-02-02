@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Text, Image } from 'react-native';
-import { GameEngine } from 'react-native-game-engine';
+import { Dimensions, StyleSheet, Text, View, StatusBar, Alert, TouchableOpacity, Image } from 'react-native';
+import Matter from "matter-js";
+import { GameEngine } from "react-native-game-engine";
+import Bird from './Bird';
+import Floor from './Floor';
+import Constants from './Constants';
+import Images from './assets/Images';
 
 class Bird extends Component {
   render() {
