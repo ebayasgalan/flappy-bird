@@ -14,7 +14,9 @@ export default class Pipe extends Component {
         const pipeIterations = Math.ceil(height / pipeHeight)
         return (
             <View>
-                
+                {Array.apply(null, Array(pipeIterations)).map(( el, idx) => {
+                    return <Image style={{ width: width, height: pipeHeight }} key={idx} resizeMode="stretch" source={Images.pipeCore} />
+                })}
             </View>
         );
     }
