@@ -12,12 +12,22 @@ export default class Pipe extends Component {
         const pipeRatio = 160 / width;
         const pipeHeight = 33 * pipeRatio;
         const pipeIterations = Math.ceil(height / pipeHeight)
+
         return (
-            <View>
+            <View
+                style={{
+                    position: "absolute",
+                    left: x,
+                    top: y,
+                    width: width,
+                    height: height,
+                    overflow: 'hidden',
+                    flexDirection: 'column'
+                }}>
                 {Array.apply(null, Array(pipeIterations)).map(( el, idx) => {
                     return <Image style={{ width: width, height: pipeHeight }} key={idx} resizeMode="stretch" source={Images.pipeCore} />
                 })}
             </View>
-        );
-    }
+    );
+  }
 }
