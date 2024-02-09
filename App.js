@@ -5,6 +5,7 @@ import { GameEngine } from "react-native-game-engine";
 import Bird from './Bird';
 import Floor from './Floor';
 import Constants from './Constants';
+import Physics, { resetPipes } from './Physics';
 import Images from './assets/Images';
 
 const styles = StyleSheet.create({
